@@ -36,7 +36,7 @@ export default {
       let arrayFecha = dia.split(['-'])
       let ddmmyy = arrayFecha[2] + '-' + arrayFecha[1] + '-' + arrayFecha[0]
       try {
-        this.mostrarLoading({titulo:'Accediendo a la informacion', color:'yellow'})
+        this.mostrarLoading({titulo:'Accediendo a la informacion', color:'blue'})
         let datos = await axios.get(`https://mindicador.cl/api/dolar/${ddmmyy}`)
         if (datos.data.serie.length > 0) {
           this.valor = datos.data.serie[0].valor
